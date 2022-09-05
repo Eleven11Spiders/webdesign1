@@ -70,7 +70,7 @@ nav ul li ul li {
   text-shadow: 0 1px 0 #000; 
 }
 nav ul li ul li:hover { 
-background-color: #FFA500;
+background-color: #FF6347;
 }
 nav ul li:hover ul {
   display: block;
@@ -83,7 +83,7 @@ overflow: hidden;
 }
 .c1 {
 float:left;
-background: #FED6BC;
+background: #00FFFF;
 width: 50%;
 height: 350px;
 }
