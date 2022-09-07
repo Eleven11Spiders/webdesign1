@@ -69,15 +69,15 @@
  font-family: 'Source Sans Pro', sans-serif;
 }
 
-#flat .fl {
+.first-character fl {
  color: #457472;
 }
 
-#flat .sl {
+.first-character .sl {
  color: #f0f0f0;
 }
 
-#flat .tl {
+.first-character .tl {
  color: #022344;
 }
 
