@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+#main {
+ width: 100%;
+ padding: 0;
+}
+.content-asset p {
+ margin: 0 auto;
+}
+.breadcrumb {
+ display: none;
+}
+
+.margin-top-10 {
+ padding-top: 10px;
+}
+.margin-bot-10 {
+ padding-bottom: 10px;
+}
+
+#flat h1 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 24px;
+ font-weight: 400;
+ text-transform: uppercase;
+ color: black;
+ padding: 0;
+ margin: 0;
+}
+
+#flat h2 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 70px;
+ letter-spacing: 10px;
+ text-align: center;
+ color: white;
+ font-weight: 400;
+ text-transform: uppercase;
+ z-index: 10;
+ opacity: .9;
+}
+
+#flat h3 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 14px;
+ line-height: 0;
+ font-weight: 400;
+ letter-spacing: 8px;
+ text-transform: uppercase;
+ color: black;
+}
+
+#flat p {
+ font-family: 'Source Sans Pro', sans-serif;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 24px;
+}
+
+
+сентября 06, 2022
+WEB-ДИЗАЙН. 4 КУРС. ПРАКТИЧЕСКОЕ ЗАНЯТИЕ №1. FLAT-ДИЗАЙН
+ 
+
+Вам нужно создать страницу, реализованную по принципам плоского дизайна, включающую в себя:
+
+- три иллюстрации
+- три блока текста со стартовыми буквами
+- три градиент-разделителя
+
+При этом переход градиента должен в целом совпадать с логикой иллюстраций и начинаться с того же цвета, что и каждая из стартовых букв.
+
+Для создания страницы потребуется конфигурация стилей в CSS и подключение этих стилей к коду страницы в HTML.
+
+Рекомендуемая тема для выполнения задания: Contempo 1. В настройках темы необходимо отключить фоновую картинку.
+
+I) Параметры стилей
+
+1) Через директиву импорта указываем шрифты, которые будут использоваться на странице:
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+2) В идентификаторе задаем размеры страницы – в моем случае 100%:
+
+#main {
+ width: 100%;
+ padding: 0;
+}
+.content-asset p {
+ margin: 0 auto;
+}
+.breadcrumb {
+ display: none;
+}
+
+3) Задаем отступы сверху и снизу:
+
+
+.margin-top-10 {
+ padding-top: 10px;
+}
+.margin-bot-10 {
+ padding-bottom: 10px;
+}
+
+4) Для каждого заголовка указываем шрифт, кегль, цвет и отступы:
+
+#flat h1 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 24px;
+ font-weight: 400;
+ text-transform: uppercase;
+ color: black;
+ padding: 0;
+ margin: 0;
+}
+
+#flat h2 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 70px;
+ letter-spacing: 10px;
+ text-align: center;
+ color: white;
+ font-weight: 400;
+ text-transform: uppercase;
+ z-index: 10;
+ opacity: .9;
+}
+
+#flat h3 {
+ font-family: 'Oswald', sans-serif;
+ font-size: 14px;
+ line-height: 0;
+ font-weight: 400;
+ letter-spacing: 8px;
+ text-transform: uppercase;
+ color: black;
+}
+
+5) Та же история для абзацев текста:
+
+#flat p {
+ font-family: 'Source Sans Pro', sans-serif;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 24px;
+}
+
+6) И общего параметра для стартовых букв:
+
+.first-character {
+ font-weight: 400;
+ float: left;
+ font-size: 84px;
+ line-height: 64px;
+ padding-top: 4px;
+ padding-right: 8px;
+ padding-left: 3px;
+ font-family: 'Source Sans Pro', sans-serif;
+}
+
+#flat .title {
+ background: white;
+ padding: 60px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+#flat .title h1 {
+ font-size: 35px;
+ letter-spacing: 8px;
+}
+
+#flat .block {
+ background: white;
+ padding: 6px;
+ width: 820px;
+ margin: 0 auto;
+ text-align: justify;
+}
+
+#flat .block-gray {
+ background: #f2f2f2;
+ padding: 6px;
+}
+
+#flat .section-overlay-mask {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: black;
+ opacity: 0.70;
+}
+
+#flat .parallax-one {
+ padding-top: 200px;
+ padding-bottom: 200px;
+ overflow: hidden;
+ position: relative;
+ width: 100%;
+ background-image: url("https://raw.githack.com/Eleven11Spiders/webdesign1/main/shiuv1.png");
+ background-attachment: fixed;
+ background-size: cover;
+ -moz-background-size: cover;
+ -webkit-background-size: cover;
+ background-repeat: no-repeat;
+ background-position: top center;
+}
+
+#flat .line-break-first {
+ background: linear-gradient(60deg, #457472, #a7a6a3, #9a050b);
+ width: 100%;
+ margin: 0 auto;
+}
+
+#flat .parallax-two {
+ padding-top: 200px;
+ padding-bottom: 200px;
+ overflow: hidden;
+ position: relative;
+ width: 100%;
+ background-image: url("https://raw.githack.com/Eleven11Spiders/webdesign1/main/shiuv2.png");
+ background-attachment: fixed;
+ background-size: cover;
+ -moz-background-size: cover;
+ -webkit-background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+
+#flat .line-break-second {
+ background: linear-gradient(60deg, #f0f0f0, #b2b2b2, #060606);
+ width: 100%;
+ margin: 0 auto;
+}
+
+#flat .parallax-three {
+ padding-top: 200px;
+ padding-bottom: 200px;
+ overflow: hidden;
+ position: relative;
+ width: 100%;
+ background-image: url("https://raw.githack.com/Eleven11Spiders/webdesign1/main/shiuv3.png");
+ background-attachment: fixed;
+ background-size: cover;
+ -moz-background-size: cover;
+ -webkit-background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+
+#flat .line-break-third {
+ background: linear-gradient(60deg, #022344, #6e6242, #983009);
+ width: 100%;
+ margin: 0 auto;
+}
+
+@media screen and (max-width: 959px) and (min-width: 768px) {
+ #flat .block {
+  padding: 40px;
+  width: 620px;
+ }
+}
+@media screen and (max-width: 767px) {
+ #flat .block {
+  padding: 30px;
+  width: 420px;
+ }
+ #flat h2 {
+  font-size: 30px;
+ }
+ #flat .block {
+  padding: 30px;
+ }
+ #flat .parallax-one, #flat .parallax-two, #flat .parallax-three {
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+}
+@media screen and (max-width: 479px) {
+ #flat .block {
+  padding: 30px 15px;
+  width: 290px;
+ }
+}
